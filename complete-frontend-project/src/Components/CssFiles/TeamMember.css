@@ -1,0 +1,292 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  scroll-behavior: smooth;
+}
+
+/* Font Imports */
+/* MainHeading Font */
+@font-face {
+  font-family: "MainHeading";
+  src: url("../Fonts/Main.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Text Font */
+@font-face {
+  font-family: "Text";
+  src: url("../Fonts/TextTwo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Signature Font */
+@font-face {
+  font-family: "Signature";
+  src: url("../Fonts/NewFont.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SignatureTwo Font */
+@font-face {
+  font-family: "SignatureTwo";
+  src: url("../Fonts/Signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SmallTitle Font */
+@font-face {
+  font-family: "SmallTitle";
+  src: url("../Fonts/SmallTitle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color Variables */
+:root {
+  --gray-color: #252525;
+  --light-gray-color: #424249;
+  --white-color: #f9f9f9;
+  --orange-color: #ff6464;
+  --blue-color: #7071e8;
+  --yellow-color: #f8ff95;
+}
+
+/* Global Variables */
+:root {
+  --main-title-font: "MainHeading";
+  --small-title-font: "SmallTitle";
+  --text-font: "Text";
+  --sign-font: "Signature";
+  --Sign-two: "SignatureTwo";
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+}
+
+/* Body styling */
+body {
+  color: var(--gray-color);
+  background-color: var(--white-color);
+  font-family: var(--text-font);
+}
+
+/* Team section styling */
+.team-all-content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Team container styling */
+.team-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+
+/* Team main title styling */
+.team-all-content .team-main-title h1{
+  font-size: 65px;
+  font-family: var(--main-title-font);
+  letter-spacing: 1px;
+}
+
+/* Top paragraph styling */
+.top-paragraph p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-left: 5%;
+  width: 75%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.top-paragraph p span {
+  color: var(--orange-color);
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+/* Styling for team member cards and expandable card */
+.team-member-cards .expandable-card {
+  cursor: pointer;
+  padding: 15px;
+  background-color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+/* Styling for team cards */
+.team-member-cards .team-card {
+  width: 350px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  transition: transform 0.3s ease; /* Add transition for smooth rotation */
+}
+
+.team-member-cards .team-card:hover {
+  transform: rotate(5deg); /* Adjust the rotation angle as needed */
+}
+
+/* Styling for team member image */
+.team-card .team-img {
+  width: 300px;
+  height: 350px;
+  background-position: center;
+  overflow: hidden;
+}
+
+.team-card .team-img img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+}
+
+/* Styling for team member signature */
+.team-card .team-signature {
+  font-family: var(--Sign-two);
+  font-size: 30px;
+}
+
+/* Styling for expanded card */
+.layer-card {
+  padding: 15px;
+}
+
+.card-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+/* Styling for team card in expanded view */
+.team-card-out {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  height: 400px;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background-color: var(--orange-color);
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Styling for team member skill section */
+.team-card-out .team-skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-skill p {
+  font-size: 28px;
+  font-family: var(--main-title-font);
+  letter-spacing: 1px;
+}
+
+.team-skill .wow-img img {
+  width: 75px;
+  height: auto;
+}
+
+/* Styling for paragraph and social icons in expanded card */
+.para-social .para p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Styling for expanded card when it's visible */
+.card-out-expanded {
+  display: block;
+}
+
+/* Styling for social icons in expanded card */
+.para-social .social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.para-social .social-icons a {
+  color: var(--gray-color);
+}
+
+/* Media query for screens up to 845px width */
+@media (max-width: 845px) {
+  /* Adjustments for the team container */
+  .team-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Styling for the overall team content */
+  .team-all-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  /* Styling for the top paragraph */
+  .top-paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Center-align the team main title and top paragraph text */
+  .team-main-title,
+  .top-paragraph p {
+    padding-left: 0%;
+    text-align: center;
+  }
+}
+
+/* Media query for screens up to 650px width */
+@media (max-width: 500px) {
+  .team-all-content .team-main-title h1{
+    font-size: 40px;
+    font-family: var(--main-title-font);
+    letter-spacing: 1px;
+  }
+}

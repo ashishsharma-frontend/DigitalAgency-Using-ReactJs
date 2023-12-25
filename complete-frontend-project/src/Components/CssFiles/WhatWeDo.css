@@ -1,0 +1,383 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  scroll-behavior: smooth;
+}
+
+/* Font Imports */
+/* MainHeading Font */
+@font-face {
+  font-family: "MainHeading";
+  src: url("../Fonts/Main.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Text Font */
+@font-face {
+  font-family: "Text";
+  src: url("../Fonts/TextTwo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Signature Font */
+@font-face {
+  font-family: "Signature";
+  src: url("../Fonts/NewFont.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SignatureTwo Font */
+@font-face {
+  font-family: "SignatureTwo";
+  src: url("../Fonts/Signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SmallTitle Font */
+@font-face {
+  font-family: "SmallTitle";
+  src: url("../Fonts/SmallTitle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color Variables */
+:root {
+  --gray-color: #252525;
+  --light-gray-color: #424249;
+  --white-color: #f9f9f9;
+  --orange-color: #ff6464;
+  --blue-color: #7071e8;
+  --yellow-color: #f8ff95;
+}
+
+/* Global Variables */
+:root {
+  --main-title-font: "MainHeading";
+  --small-title-font: "SmallTitle";
+  --text-font: "Text";
+  --sign-font: "Signature";
+  --Sign-two: "SignatureTwo";
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+}
+
+/* General styling for the entire page */
+body {
+  color: var(--gray-color);
+  background-color: var(--white-color);
+  font-family: var(--text-font);
+  margin: 0;
+}
+
+/* Big container for overall content with a maximum width */
+.big-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Styling for card headings */
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  font-family: var(--main-title-font);
+  margin: 20px 0;
+  text-align: center;
+  margin-top: -35px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.what-work-do {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 20px 40px;
+}
+
+.work-do-text {
+  width: 100%;
+  margin: 0 auto;
+  text-align: start;
+}
+
+.what-work-do .work-do-text p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.what-work-do .work-do-heading h1 {
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-family: var(--main-title-font);
+}
+
+.work-do-heading h1 span {
+  background-color: #ff6464;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.work-do-para {
+  display: flex;
+  align-items: center;
+  text-align: start;
+}
+
+.work-do-para p {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Styling for animated logo images */
+.svg-logo-img-one img,
+.svg-logo-img-two img {
+  vertical-align: middle;
+  width: 65px;
+  transition: var(--transition-1);
+  margin-top: 15px;
+}
+
+/* Animation keyframes for the logo images */
+.svg-logo-img-one img {
+  animation: rotateAndMoveOne 2s infinite alternate;
+}
+
+.svg-logo-img-two img {
+  animation: rotateAndMoveTwo 2s infinite alternate;
+}
+
+/* Keyframes for the logo animation */
+@keyframes rotateAndMoveOne {
+  0% {
+    transform: rotate(-10deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(10deg) translateY(-10px);
+  }
+}
+
+@keyframes rotateAndMoveTwo {
+  0% {
+    transform: rotate(10deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(-10deg) translateY(-10px);
+  }
+}
+
+/* Styling for paragraphs within the service section */
+.service-title-para p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Styling for service content section */
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin-bottom: 45px;
+}
+
+/* Styling for a general container for services */
+.Service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.top-dev-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  background-color: #dfffd8;
+  margin-top: 30px;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.top-dev-text img {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.top-dev-text img:hover {
+  transform: rotate(0deg);
+}
+
+.top-dev-text .count {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Styling for development and design content sections */
+.development-content,
+.desgin-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Styling for text content titles */
+.text-content .title h1 {
+  font-size: 30px;
+  font-family: var(--small-title-font);
+}
+
+.Service-container .service {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.Service-container .service.hide {
+  opacity: 0;
+  max-height: 0;
+  margin-top: 0;
+}
+
+.Service-container .service.show {
+  opacity: 1;
+  max-height: 500px;
+  margin-top: 25px;
+}
+
+.Service-container .service {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Styling for individual service spans */
+.Service-container .service span {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: calc(33.33% - 10px);
+  font-size: 18px;
+  padding: 20px;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 10px;
+}
+
+/* Adjust the second line spans to take up 50% width */
+.Service-container .service span:nth-child(4),
+.Service-container .service span:nth-child(5) {
+  width: calc(
+    50% - 10px
+  ); /* 50% width for the second line, considering the 10px gap */
+}
+
+@media (max-width: 1000px) {
+  .what-work-do {
+    display: flex;
+    flex-direction: column;
+  }
+  .work-do-para {
+    margin-top: 25px;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 800px) {
+  /* Adjusting the width of the service container */
+  .Service-container .service {
+    width: 90%;
+  }
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+  /* Adjusting the margin for the big container */
+  .big-container {
+    margin-top: -8nn0px; /* Typo: Should be -80px */
+  }
+
+  /* Adjusting font size for card headings on smaller screens */
+  .card-heading {
+    font-size: 30px;
+  }
+}
+
+/* Media query for screens with a maximum width of 380px */
+@media (max-width: 380px) {
+  /* Adjusting font size for card headings on smaller screens */
+  .card-heading {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 690px) {
+  /* Styling for individual service spans */
+  .Service-container .service span {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .top-dev-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-dev-text .title {
+    margin-bottom: 15px;
+  }
+
+  .what-work-do .work-do-heading h1 {
+    font-size: 40px;
+    margin-bottom: 5px
+  }
+  
+}
+
+@media (max-width: 1335px) {
+  .card-heading {
+    margin-top: 65px;
+  }
+}

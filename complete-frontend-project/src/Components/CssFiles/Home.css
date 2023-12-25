@@ -1,0 +1,577 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  scroll-behavior: smooth;
+}
+
+/* Font Imports */
+/* MainHeading Font */
+@font-face {
+  font-family: "MainHeading";
+  src: url("../Fonts/Main.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Text Font */
+@font-face {
+  font-family: "Text";
+  src: url("../Fonts/TextTwo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Signature Font */
+@font-face {
+  font-family: "Signature";
+  src: url("../Fonts/NewFont.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SignatureTwo Font */
+@font-face {
+  font-family: "SignatureTwo";
+  src: url("../Fonts/Signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SmallTitle Font */
+@font-face {
+  font-family: "SmallTitle";
+  src: url("../Fonts/SmallTitle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color Variables */
+:root {
+  --gray-color: #252525;
+  --light-gray-color: #424249;
+  --white-color: #f9f9f9;
+  --orange-color: #ff6464;
+  --blue-color: #7071e8;
+  --yellow-color: #f8ff95;
+}
+
+/* Global Variables */
+:root {
+  --main-title-font: "MainHeading";
+  --small-title-font: "SmallTitle";
+  --text-font: "Text";
+  --sign-font: "Signature";
+  --Sign-two: "SignatureTwo";
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+}
+
+/* Body Styles */
+body {
+  color: var(--gray-color);
+  background-color: var(--white-color);
+  font-family: var(--text-font);
+}
+
+/* Home Container Styles */
+.home-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Home Content Styles */
+.home-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Home Text Content Styles */
+.home-content .text-content p {
+  font-size: 35px;
+  font-family: var(--sign-font);
+  margin-top: 20px;
+}
+
+/* Home Text Content Image Styles */
+.text-content img {
+  width: 55px;
+  vertical-align: middle;
+}
+
+/* Home Heading Styles */
+.text-content .heading {
+  margin: 25px 0px;
+}
+
+.text-content .heading h1 {
+  font-family: var(--main-title-font);
+  font-size: 80px;
+  letter-spacing: 2px;
+}
+
+.text-content .heading h1 span {
+  color: var(--orange-color);
+}
+
+/* Video Container Styles */
+.video-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+/* Video Styles */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgb(242, 243, 247);
+  object-position: 50% 50%;
+  border-radius: 50px;
+}
+
+/* Info Container Styles */
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+/* Info Title Styles */
+.info-container .info-title h1 {
+  font-size: 70px;
+  font-family: var(--main-title-font);
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Info Content Styles */
+.info-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  min-height: 550px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1),
+    2px 0 4px rgba(0, 0, 0, 0.1), -2px 0 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px;
+  border-radius: 12px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* Switch Button Container Styles */
+.info-container .switch-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Switch Button Styles */
+.switch-button button {
+  border-radius: 12px;
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  background-color: var(--white-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro Content Styles */
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Intro Title Styles */
+.intro-content .intro-title h1 {
+  font-size: 25px;
+  font-family: var(--main-title-font);
+  letter-spacing: 1px;
+  color: #ff8080;
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Content Intro Text Container Styles */
+.info-content .intro-text-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid var(--light-gray-color);
+  transition: border-bottom 0.3s ease;
+}
+
+/* Main Text Styles */
+.intro-text-content .main-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* My Image Styles */
+.intro-content .intro-text-content .my-image {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* My Image Image Styles */
+.intro-text-content .my-image img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: var(--white-color);
+}
+
+/* Text Styles */
+.intro-text-content .text p {
+  font-size: 35px;
+  font-family: var(--Sign-two);
+}
+
+/* Text Span Styles */
+.intro-text-content .text span {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  margin-top: -10px;
+}
+
+/* Professional and Experience Styles */
+.main-content .pro-exper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30px 0px;
+  text-align: center;
+}
+
+/* Projects and Experience Span Styles */
+.pro-exper .projects span,
+.pro-exper .experience span {
+  font-size: 25px;
+  font-family: var(--small-title-font);
+  color: #ff8080;
+}
+
+/* Projects and Experience Paragraph Styles */
+.pro-exper .projects p,
+.pro-exper .experience p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Social Media Styles */
+.main-content .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Instagram, GitHub, LinkedIn Styles */
+.instagram,
+.github,
+.linkdin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Icon Styles */
+.instagram .icon,
+.github .icon,
+.linkdin .icon {
+  font-size: 25px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+/* Icon Name Styles */
+.instagram .icon-name p,
+.github .icon-name p,
+.linkdin .icon-name p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Quotes Styles */
+.quotes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Digital Agency Styles */
+.digital-agency {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+
+/* Digital Agency Title Styles */
+.digital-agency .title h1 {
+  font-family: var(--main-title-font);
+  font-size: 25px;
+  color: #ff8080;
+}
+
+/* Digital Agency Main Title Styles */
+.digital-agency .main-title h1 {
+  font-size: 25px;
+  font-family: var(--small-title-font);
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  color: var(--light-gray-color);
+}
+
+/* Digital Agency Paragraph Styles */
+.digital-agency .paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Digital Agency Paragraph Text Styles */
+.digital-agency .paragraph p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Digital Agency Button Styles */
+.digital-agency .digital-button button {
+  padding: 15px 40px;
+  border-radius: 100px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 35px;
+  color: var(--white-color);
+  background-color: var(--gray-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Passion Styles */
+.passion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px;
+}
+
+/* Passion Title Styles */
+.passion .title h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #ff8080;
+  font-family: var(--main-title-font);
+}
+
+/* Passion Main Title Styles */
+.passion .main-title {
+  margin-bottom: 25px;
+}
+
+/* Passion Main Title Heading Styles */
+.passion .main-title h1 {
+  font-family: var(--small-title-font);
+  font-size: 25px;
+  color: var(--light-gray-color);
+}
+
+/* Passion Main Title Paragraph Styles */
+.passion .main-title p {
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* Passion Paragraph Styles */
+.passion .paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Passion Paragraph Text Styles */
+.passion .paragraph p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Responsive Font Sizes */
+
+/* Large screens (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+  .text-content .heading h1 {
+    font-size: 65px;
+  }
+}
+
+/* Medium screens (max-width: 992px) */
+@media screen and (max-width: 992px) {
+  .text-content .heading h1 {
+    font-size: 55px;
+  }
+}
+
+/* Smaller screens (max-width: 1000px) */
+@media screen and (max-width: 1000px) {
+  /* Adjustments for image container */
+  .img-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+  }
+}
+
+/* Tablets and smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .text-content .heading h1 {
+    font-size: 45px;
+  }
+  /* Adjustments for home content */
+  .home-content {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 350px;
+  }
+
+  .video {
+    width: 100%;
+  }
+}
+
+/* Mobile screens (max-width: 750px) */
+@media screen and (max-width: 750px) {
+  /* Adjustments for quotes and intro text content */
+  .quotes {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-content .intro-text-content {
+    flex-direction: column;
+  }
+
+  /* Adjustments for image size */
+  .info-text-content .my-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Extra small screens (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  /* Adjustments for info container title */
+  .info-container .info-title h1 {
+    font-size: 60px;
+  }
+}
+
+/* Very small screens (max-width: 500px) */
+@media screen and (max-width: 500px) {
+  /* Adjustments for various elements */
+  .info-content {
+    padding: 10px;
+    max-width: 95%;
+    padding: 0px;
+  }
+
+  .intro-text-content .text p {
+    font-size: 28px;
+  }
+
+  .intro-text-content .main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .intro-content .intro-text-content .my-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .intro-text-content .my-image img {
+    border-radius: 12px;
+  }
+
+  .info-container .info-title h1 {
+    font-size: 50px;
+  }
+
+  .text-content .heading h1 {
+    font-size: 40px;
+  }
+}
+
+/* Extremely small screens (max-width: 400px) */
+@media screen and (max-width: 400px) {
+  .text-content .heading h1 {
+    font-size: 35px;
+  }
+}
+
+/* Very small screens (max-width: 380px) */
+@media (max-width: 380px) {
+  .text-content .heading h1 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,316 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  scroll-behavior: smooth;
+}
+
+/* Font Imports */
+/* MainHeading Font */
+@font-face {
+  font-family: "MainHeading";
+  src: url("../Fonts/Main.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Text Font */
+@font-face {
+  font-family: "Text";
+  src: url("../Fonts/TextTwo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Signature Font */
+@font-face {
+  font-family: "Signature";
+  src: url("../Fonts/NewFont.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SignatureTwo Font */
+@font-face {
+  font-family: "SignatureTwo";
+  src: url("../Fonts/Signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SmallTitle Font */
+@font-face {
+  font-family: "SmallTitle";
+  src: url("../Fonts/SmallTitle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color Variables */
+:root {
+  --gray-color: #252525;
+  --light-gray-color: #424249;
+  --white-color: #f9f9f9;
+  --orange-color: #ff6464;
+  --blue-color: #7071e8;
+  --yellow-color: #f8ff95;
+}
+
+/* Global Variables */
+:root {
+  --main-title-font: "MainHeading";
+  --small-title-font: "SmallTitle";
+  --text-font: "Text";
+  --sign-font: "Signature";
+  --Sign-two: "SignatureTwo";
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+}
+
+/* Body Styles */
+body {
+  color: var(--gray-color);
+  background-color: var(--white-color);
+  font-family: var(--text-font);
+}
+
+/* Project Container */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Project Title */
+.project-title h1 {
+  /* Adding comments for project title styles */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 65px;
+  font-family: var(--main-title-font);
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+
+/* Project Content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* E-commerce, Frontend Portfolio, Education Platform Sections */
+.e-commerce-web,
+.frontend-portfolio,
+.education-platform {
+  /* Adding comments for project sections */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+/* Project Text Styles */
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-text h1 {
+  /* Adding comments for project text styles */
+  font-size: 28px;
+  font-family: var(--main-title-font);
+  letter-spacing: 1px;
+}
+
+.project-text span {
+  /* Adding comments for project text styles */
+  font-size: 20px;
+  font-family: var(--small-title-font);
+  color: var(--light-gray-color);
+  letter-spacing: 1px;
+}
+
+.project-text p {
+  /* Adding comments for project text styles */
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Project Image Styles */
+.project-image {
+  /* Adding comments for project image styles */
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 3px;
+  background-color: #B983FF;
+  border-radius: 10px;
+  transition: var(--transition-1);
+}
+
+.project-image img {
+  /* Adding comments for project image styles */
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.project-image:hover {
+  transform: scale(0.95);
+}
+
+.project-text .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.project-text .buttons .live-button,
+.project-text .buttons .more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  margin: 0 auto;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.live-button {
+  background-color: #faf4b7;
+}
+
+.more {
+  background-color: #c1f2b0;
+}
+
+.project-text .buttons .live-button:hover,
+.project-text .buttons .more:hover {
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-color);
+  transform: scale(1.1);
+}
+
+.project-text .buttons .live-button span,
+.project-text .buttons .more span {
+  font-family: var(--text-font);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.project-text .buttons img{
+  width: 25px;
+  vertical-align: middle;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large screens (above 1100px) */
+@media (max-width: 1100px) {
+  /* Adding comments for large screens styles */
+  .project-container {
+    margin-top: 50px;
+  }
+
+  .project-title h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  .project-image {
+    max-width: 400px;
+    height: 300px;
+  }
+
+  .button span {
+    width: 120px;
+    height: 120px;
+    font-size: 18px;
+  }
+}
+
+/* Medium screens (between 900px and 1100px) */
+@media (max-width: 1000px) {
+  /* Adding comments for medium screens styles */
+  .e-commerce-web,
+  .frontend-portfolio,
+  .education-platform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .frontend-portfolio .project-text {
+    order: 1;
+  }
+
+  .frontend-portfolio .image-content {
+    order: 2;
+  }
+}
+
+/* Small screens (between 550px and 900px) */
+@media (max-width: 900px) {
+  /* Adding comments for small screens styles */
+  .project-container {
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+
+  .project-title h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .project-image {
+    width: 100%; /* Make the image full width */
+    max-width: none; /* Remove max-width to allow full width */
+    height: auto; /* Allow the image to scale proportionally */
+  }
+
+  .button span {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-title h1 {
+    font-size: 40px;
+  }
+}

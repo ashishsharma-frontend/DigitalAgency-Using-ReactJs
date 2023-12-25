@@ -1,0 +1,187 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  scroll-behavior: smooth;
+}
+
+/* Font Imports */
+/* MainHeading Font */
+@font-face {
+  font-family: "MainHeading";
+  src: url("../Fonts/Main.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Text Font */
+@font-face {
+  font-family: "Text";
+  src: url("../Fonts/TextTwo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Signature Font */
+@font-face {
+  font-family: "Signature";
+  src: url("../Fonts/NewFont.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SignatureTwo Font */
+@font-face {
+  font-family: "SignatureTwo";
+  src: url("../Fonts/Signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SmallTitle Font */
+@font-face {
+  font-family: "SmallTitle";
+  src: url("../Fonts/SmallTitle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color Variables */
+:root {
+  --gray-color: #252525;
+  --light-gray-color: #424249;
+  --white-color: #f9f9f9;
+  --orange-color: #ff6464;
+  --blue-color: #7071e8;
+  --yellow-color: #f8ff95;
+}
+
+/* Global Variables */
+:root {
+  --main-title-font: "MainHeading";
+  --small-title-font: "SmallTitle";
+  --text-font: "Text";
+  --sign-font: "Signature";
+  --Sign-two: "SignatureTwo";
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+}
+
+/* General styling for the entire page */
+body {
+  color: var(--gray-color);
+  background-color: var(--white-color);
+  font-family: var(--text-font);
+  margin: 0;
+}
+
+.work-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAF4B7;
+  border-radius: 12px;
+  padding: 40px 0px;
+}
+
+
+  .work-content {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .work-content .work-top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 45px;
+  }
+
+  .work-content .work-top-text span {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .work-top-text h1 {
+    font-size: 65px;
+    font-family: var(--main-title-font);
+    letter-spacing: 1px;
+  }
+
+  .work-top-text p {
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  
+  .work-process-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .work {
+    flex: 1 1 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    background-color: var(--white-color);
+  }
+  
+  .work .card-title span {
+    font-size: 18px;
+    color: var(--light-gray-color);
+    letter-spacing: 1px;
+  }
+  
+  .work .img-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .work .img-text-content .work-image {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  
+  .work .img-text-content .work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .work .img-text-content h1 {
+    font-size: 20px;
+    font-family: var(--main-title-font);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 500px) {
+    .work-top-text h1 {
+      font-size: 40px;
+      font-family: var(--main-title-font);
+      letter-spacing: 1px;
+    }
+  }
