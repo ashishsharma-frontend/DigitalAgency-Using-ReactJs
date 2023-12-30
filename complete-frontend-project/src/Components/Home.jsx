@@ -1,21 +1,23 @@
+// Home.jsx
 // Importing necessary modules and styles
 import React, { useState } from "react";
 import "./CssFiles/Home.css";
 import ManVideo from "./ProjectImage/HomeImages/Home.mp4";
+import WorkImg from './ProjectImage/HomeImages/Work.png';
+import PassionImg from "./ProjectImage/HomeImages/PassionImg.png"
 import EyeImg from "./ProjectImage/HomeImages/eye.svg";
-import AshishImg from "./ProjectImage/HomeImages/Ashish.jpg";
+import ProfileImg from "./ProjectImage/HomeImages/Main.jpg";
 import { TfiInstagram } from "react-icons/tfi";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
+import showToast from "./Toast/ToastHome";
 
-// Home component
 function Home() {
-  // State to manage the content switch
   const [currentContent, setCurrentContent] = useState(1);
 
-  // Function to switch content based on button click
-  const switchContent = (contentNumber) => {
+  const switchContent = (contentNumber, toastMessage) => {
     setCurrentContent(contentNumber);
+    showToast(toastMessage, contentNumber);
   };
 
   return (
@@ -27,8 +29,8 @@ function Home() {
             Available For Hire <img src={EyeImg} alt="" />
           </p>
           <div className="heading">
-            <h1>We </h1>
-            <h1> create </h1>
+            <h1>We</h1>
+            <h1>create </h1>
             <h1>Memorial</h1>
             <h1> Experience</h1>
             <h1>
@@ -50,14 +52,21 @@ function Home() {
         <div className="info-title">
           <h1>What About Me ?</h1>
         </div>
-        <div className="info-content">
-          {/* Buttons to switch content */}
-          <div className="switch-button">
-            <button onClick={() => switchContent(1)}>Intro</button>
-            <button onClick={() => switchContent(2)}>About Web</button>
-            <button onClick={() => switchContent(3)}>Passion</button>
-          </div>
 
+        <div className="info-content">
+          <div className="switch-button">
+            <button onClick={() => switchContent(1, "Switched to Intro ☄️")}>
+              Intro
+            </button>
+            <button
+              onClick={() => switchContent(2, "Switched to About Web  🪐")}
+            >
+              About Web
+            </button>
+            <button onClick={() => switchContent(3, "Switched to Passion 🔮")}>
+              Passion
+            </button>
+          </div>
           {/* Render content based on the current selection */}
           {currentContent === 1 && <IntroContent />}
           {currentContent === 2 && <AboutWebContent />}
@@ -71,39 +80,27 @@ function Home() {
 const IntroContent = () => {
   return (
     <div className="intro-content">
-      <div className="intro-title">
-        <h1>Intro</h1>
-      </div>
-      <div className="main-content">
-        <div className="intro-text-content">
-          <div className="main-text">
-            <div className="my-image">
-              <img src={AshishImg} alt="" />
-            </div>
-            <div className="text">
-              <p>Ashish Sharma</p>
-              <span>Frontend Developer</span>
-            </div>
-          </div>
+      <div className="intro-text-image">
+        <div className="intro-image">
+          <img src={ProfileImg} alt="" />
         </div>
+        <div className="intro-text">
+          <h1>Ashish Sharma</h1>
+          <p>FullStack Developer</p>
+        </div>
+      </div>
 
-        <div className="pro-exper">
-          <div className="projects">
-            <span> 04 +</span>
-            <p>Projects</p>
-          </div>
-          <div className="experience">
-            <span> 6 +</span>
-            <p>Months</p>
-          </div>
+      <div className="intro-bottom-text">
+        <div className="about-text">
+          <p>
+            Passionate FullStack Developer and UI/UX enthusiast, Ashish Sharma,
+            finds joy in crafting seamless digital experiences. With a cup of
+            coffee in hand, he believes in constant learning, turning challenges
+            into opportunities.
+          </p>
         </div>
 
         <SocialMediaIcons />
-      </div>
-      <div className="quotes">
-        <p>
-          Crafting logic into lines, creating digital symphonies of innovation.
-        </p>
       </div>
     </div>
   );
@@ -115,7 +112,13 @@ const SocialMediaIcons = () => {
     <div className="social-media">
       <div className="instagram">
         <div className="icon">
-          <TfiInstagram />
+          <a
+            href="https://www.instagram.com/coder_boy_ashish"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TfiInstagram />
+          </a>
         </div>
         <div className="icon-name">
           <p>InstaGram</p>
@@ -123,7 +126,13 @@ const SocialMediaIcons = () => {
       </div>
       <div className="github">
         <div className="icon">
-          <FiGithub />
+          <a
+            href="https://github.com/ashishsharma-frontend"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FiGithub />
+          </a>
         </div>
         <div className="icon-name">
           <p>GitHub</p>
@@ -131,7 +140,13 @@ const SocialMediaIcons = () => {
       </div>
       <div className="linkdin">
         <div className="icon">
-          <FaLinkedinIn />
+          <a
+            href="https://www.linkedin.com/in/your_linkedin_profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedinIn />
+          </a>
         </div>
         <div className="icon-name">
           <p>LinkedIn</p>
@@ -151,6 +166,10 @@ const AboutWebContent = () => {
 
       <div className="main-title">
         <h1>Innovate. Collaborate. Elevate</h1>
+      </div>
+
+      <div className="work-img">
+        <img src={WorkImg} alt="" />
       </div>
       <div className="paragraph">
         <p>
@@ -182,6 +201,11 @@ const PassionContent = () => {
         <h1>CODING IS MORE THAN JUST A JOB</h1>
         <p>Coding Is Passion</p>
       </div>
+
+      <div className="passion-img">
+        <img src={PassionImg} alt="" />
+      </div>
+
       <div className="paragraph">
         <p>
           I am very lucky that I was able to turn my hobby into a profession. I

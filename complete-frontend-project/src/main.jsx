@@ -1,24 +1,16 @@
-// Import React and ReactDOM
+// main.jsx
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-// Import the main App component
+import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-// Import necessary components from react-router-dom
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Use createRoot from "react-dom/client"
+const root = createRoot(document.getElementById('root'));
 
-// Use ReactDOM.createRoot to render the app in the 'root' element
-ReactDOM.createRoot(document.getElementById('root')).render(
-  // Use React.StrictMode for additional development features
+root.render(
   <React.StrictMode>
-    {/* Set up the Router for navigation */}
     <Router>
-      {/* Define Routes for the application */}
-      <Routes>
-        {/* Route for any path, rendering the App component */}
-        <Route path="/*" element={<App />} />
-      </Routes>
+      <App />
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

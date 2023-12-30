@@ -3,6 +3,7 @@ import "./CssFiles/WhatWeDo.css";
 import EyeLeftSvg from "./ProjectImage/WhatWeDoImage/EyeRight.svg";
 import EyeRight from "./ProjectImage/WhatWeDoImage/EyeLeft.svg";
 import Arrow from "./ProjectImage/WhatWeDoImage/Arrow.svg";
+import showToast from "./Toast/ToastWhatWeDo";
 
 function WhatWeDO() {
   const [showWebDevelopment, setShowWebDevelopment] = useState(false);
@@ -10,13 +11,26 @@ function WhatWeDO() {
 
   const toggleWebDevelopment = () => {
     setShowWebDevelopment(!showWebDevelopment);
-    setShowWebDesign(false); // Hide Web Design
+    setShowWebDesign(false);
+    showToast(showWebDevelopment ? "Web Development closed!" : "Web Development opened!");
+
+    // If Web Design is open, display toast for closing it
+    if (showWebDesign) {
+      showToast("Web Design closed!");
+    }
   };
 
   const toggleWebDesign = () => {
     setShowWebDesign(!showWebDesign);
-    setShowWebDevelopment(false); // Hide Web Development
+    setShowWebDevelopment(false);
+    showToast(showWebDesign ? "Web Design closed!" : "Web Design opened!");
+
+    // If Web Development is open, display toast for closing it
+    if (showWebDevelopment) {
+      showToast("Web Development closed!");
+    }
   };
+
 
   return (
     <div className="big-container">

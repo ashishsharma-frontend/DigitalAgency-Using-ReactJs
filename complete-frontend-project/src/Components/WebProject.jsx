@@ -7,9 +7,15 @@ import EcommerceImg from "./ProjectImage/ProjectImages/Eccomerce.jpg";
 import PotfolioImg from "./ProjectImage/ProjectImages/Portfolio.jpg";
 import SkillsWebImg from "./ProjectImage/ProjectImages/SkillsWeb.jpg";
 import ArrowImg from "./ProjectImage/ProjectImages/Arrow.svg";
+import showToast from "./Toast/ToastWork";
 
 // WebProject component
+
 function WebProject() {
+  const showToastMessage = (text) => {
+    showToast(text);
+  };
+
   return (
     <div className="project-container">
       {/* Project title */}
@@ -33,13 +39,19 @@ function WebProject() {
               taste.
             </p>
             <div className="buttons">
-              <div className="live-button">
+              <div
+                className="live-button"
+                onClick={() => showToastMessage("Web is live!")}
+              >
                 <span>
                   Visit Live <img src={ArrowImg} alt="" />
                 </span>
               </div>
 
-              <div className="more">
+              <div
+                className="more"
+                onClick={() => showToastMessage("More about the project!")}
+              >
                 <span>
                   More <img src={ArrowImg} alt="" />
                 </span>

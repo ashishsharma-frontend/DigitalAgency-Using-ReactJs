@@ -1,5 +1,7 @@
+// Talk.jsx
 import React from "react";
 import "./CssFiles/Talk.css";
+import showToastContact from "./Toast/ToastContact";
 
 class Talk extends React.Component {
   constructor(props) {
@@ -8,7 +10,7 @@ class Talk extends React.Component {
       firstName: "",
       lastName: "",
       email: "",
-      message: "", // Add a new state for the message
+      message: "",
     };
   }
 
@@ -19,10 +21,27 @@ class Talk extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+
+    // Check if all details are entered
+    if (
+      this.state.firstName.trim() === "" ||
+      this.state.lastName.trim() === "" ||
+      this.state.email.trim() === "" ||
+      this.state.message.trim() === ""
+    ) {
+      // Display a toast message to enter all details
+      showToastContact("Please enter all details!", 'warning');
+      return; // Stop submission if details are not entered
+    }
+
     // Handle form submission logic here
+
+    // Display a toast message on form submission
+    showToastContact("Form submitted successfully!", 'success');
+
     console.log("Form submitted:", this.state);
   };
-
+  
   render() {
     return (
       <div className="talk-container">
